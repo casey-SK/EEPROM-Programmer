@@ -1,0 +1,196 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/casey/Documents/Learning/nim/pico-nim eeprom programmer/eeprom_programmer/csource/@m..@s..@s..@s..@s..@s..@s.nimble@spkgs@sadvancedIO-0.2.4@sadvancedIO.nim.c
+nimbase.h
+/home/casey/Documents/Learning/nim/pico-nim eeprom programmer/eeprom_programmer/csource/nimbase.h
+hardware/gpio.h
+/home/casey/Documents/Learning/nim/pico-nim eeprom programmer/eeprom_programmer/csource/hardware/gpio.h
+
+/home/casey/Documents/Learning/nim/pico-nim eeprom programmer/eeprom_programmer/csource/eeprom_programmer.c
+nimbase.h
+/home/casey/Documents/Learning/nim/pico-nim eeprom programmer/eeprom_programmer/csource/nimbase.h
+stdio.h
+-
+string.h
+-
+stdlib.h
+-
+hardware/gpio.h
+/home/casey/Documents/Learning/nim/pico-nim eeprom programmer/eeprom_programmer/csource/hardware/gpio.h
+
+/home/casey/Documents/Learning/nim/pico-nim eeprom programmer/eeprom_programmer/csource/nimbase.h
+limits.h
+-
+stddef.h
+-
+cstdint
+-
+stdint.h
+-
+stdbool.h
+-
+stdint.h
+-
+cstdint
+-
+float.h
+-
+sys/types.h
+-
+types/vxWind.h
+-
+tool/gnu/toolMacros.h
+-
+sys/types.h
+-
+
+/home/casey/Documents/Learning/nim/pico-nim eeprom programmer/eeprom_programmer/csource/stdlib_assertions.nim.c
+nimbase.h
+/home/casey/Documents/Learning/nim/pico-nim eeprom programmer/eeprom_programmer/csource/nimbase.h
+
+/home/casey/Documents/Learning/nim/pico-nim eeprom programmer/eeprom_programmer/csource/stdlib_dollars.nim.c
+nimbase.h
+/home/casey/Documents/Learning/nim/pico-nim eeprom programmer/eeprom_programmer/csource/nimbase.h
+
+/home/casey/Documents/Learning/nim/pico-nim eeprom programmer/eeprom_programmer/csource/stdlib_io.nim.c
+nimbase.h
+/home/casey/Documents/Learning/nim/pico-nim eeprom programmer/eeprom_programmer/csource/nimbase.h
+stdio.h
+-
+
+/home/casey/Documents/Learning/nim/pico-nim eeprom programmer/eeprom_programmer/csource/stdlib_math.nim.c
+nimbase.h
+/home/casey/Documents/Learning/nim/pico-nim eeprom programmer/eeprom_programmer/csource/nimbase.h
+
+/home/casey/Documents/Learning/nim/pico-nim eeprom programmer/eeprom_programmer/csource/stdlib_sequtils.nim.c
+nimbase.h
+/home/casey/Documents/Learning/nim/pico-nim eeprom programmer/eeprom_programmer/csource/nimbase.h
+
+/home/casey/Documents/Learning/nim/pico-nim eeprom programmer/eeprom_programmer/csource/stdlib_system.nim.c
+nimbase.h
+/home/casey/Documents/Learning/nim/pico-nim eeprom programmer/eeprom_programmer/csource/nimbase.h
+string.h
+-
+stdlib.h
+-
+stdio.h
+-
+signal.h
+-
+
+/home/casey/Documents/Learning/nim/pico-nim eeprom programmer/eeprom_programmer/csource/stdlib_tables.nim.c
+nimbase.h
+/home/casey/Documents/Learning/nim/pico-nim eeprom programmer/eeprom_programmer/csource/nimbase.h
+string.h
+-
+
+/home/casey/pico-sdk/src/boards/include/boards/pico.h
+
+/home/casey/pico-sdk/src/common/pico_base/include/pico.h
+pico/types.h
+/home/casey/pico-sdk/src/common/pico_base/include/pico/types.h
+pico/version.h
+/home/casey/pico-sdk/src/common/pico_base/include/pico/version.h
+pico/config.h
+/home/casey/pico-sdk/src/common/pico_base/include/pico/config.h
+pico/platform.h
+/home/casey/pico-sdk/src/common/pico_base/include/pico/platform.h
+pico/error.h
+/home/casey/pico-sdk/src/common/pico_base/include/pico/error.h
+
+/home/casey/pico-sdk/src/common/pico_base/include/pico/assert.h
+stdbool.h
+-
+cassert
+-
+assert.h
+-
+
+/home/casey/pico-sdk/src/common/pico_base/include/pico/config.h
+pico/config_autogen.h
+/home/casey/pico-sdk/src/common/pico_base/include/pico/pico/config_autogen.h
+
+/home/casey/pico-sdk/src/common/pico_base/include/pico/error.h
+
+/home/casey/pico-sdk/src/common/pico_base/include/pico/types.h
+pico/assert.h
+/home/casey/pico-sdk/src/common/pico_base/include/pico/pico/assert.h
+stdint.h
+-
+stdbool.h
+-
+stddef.h
+-
+
+/home/casey/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h
+
+/home/casey/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/addressmap.h
+hardware/platform_defs.h
+/home/casey/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/hardware/platform_defs.h
+
+/home/casey/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/pads_bank0.h
+
+/home/casey/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/sio.h
+
+/home/casey/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/interp.h
+hardware/address_mapped.h
+/home/casey/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/hardware/address_mapped.h
+hardware/platform_defs.h
+/home/casey/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/hardware/platform_defs.h
+hardware/regs/sio.h
+/home/casey/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/hardware/regs/sio.h
+
+/home/casey/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/padsbank0.h
+hardware/address_mapped.h
+/home/casey/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/hardware/address_mapped.h
+hardware/platform_defs.h
+/home/casey/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/hardware/platform_defs.h
+hardware/regs/pads_bank0.h
+/home/casey/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/hardware/regs/pads_bank0.h
+
+/home/casey/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/sio.h
+hardware/address_mapped.h
+/home/casey/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/hardware/address_mapped.h
+hardware/regs/sio.h
+/home/casey/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/hardware/regs/sio.h
+hardware/structs/interp.h
+/home/casey/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/hardware/structs/interp.h
+
+/home/casey/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
+
+/home/casey/pico-sdk/src/rp2_common/hardware_base/include/hardware/address_mapped.h
+pico.h
+/home/casey/pico-sdk/src/rp2_common/hardware_base/include/hardware/pico.h
+hardware/regs/addressmap.h
+/home/casey/pico-sdk/src/rp2_common/hardware_base/include/hardware/hardware/regs/addressmap.h
+
+/home/casey/pico-sdk/src/rp2_common/hardware_gpio/include/hardware/gpio.h
+pico.h
+/home/casey/pico-sdk/src/rp2_common/hardware_gpio/include/hardware/pico.h
+hardware/structs/sio.h
+/home/casey/pico-sdk/src/rp2_common/hardware_gpio/include/hardware/hardware/structs/sio.h
+hardware/structs/padsbank0.h
+/home/casey/pico-sdk/src/rp2_common/hardware_gpio/include/hardware/hardware/structs/padsbank0.h
+
+/home/casey/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h
+sys/cdefs.h
+-
+pico/types.h
+/home/casey/pico-sdk/src/rp2_common/pico_platform/include/pico/pico/types.h
+hardware/platform_defs.h
+/home/casey/pico-sdk/src/rp2_common/pico_platform/include/pico/hardware/platform_defs.h
+
+generated/pico_base/pico/config_autogen.h
+/home/casey/pico-sdk/src/boards/include/boards/pico.h
+-
+/home/casey/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
+-
+
+generated/pico_base/pico/version.h
+
