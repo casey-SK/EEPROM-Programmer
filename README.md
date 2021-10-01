@@ -29,7 +29,7 @@ Note: **bold** values indicate hardware that has been tested. All others are
 
 here is an example using dedicated pins:
 
-*example1 fritzing model here*
+![Fritzing Model of Pin Only Arrangement](/examples/example1_pinsOnly_sketch_breadboard.png)
 
 *example1 code here*
 
@@ -41,7 +41,7 @@ here is an example using a mix of dedicated and hybrid pins:
 **Note:** The current implementation of this library only supports *shift-out*, 
 not *shift-in*, so the data (IO) pins **MUST** be dedicated.
 
-*example1 fritzing model here*
+![Fritzing Model of Hybrid Arrangement](/examples/example2_hybrid_sketch_breadboard.png)
 
 *example2 here*
 
@@ -57,6 +57,7 @@ information on Inputs / Outputs Here
 ## To Do
 
 - Implement 74HC166 support
+- Implement 74HC299 support
 - Tests via pico debug?
 
 ## Contributing
