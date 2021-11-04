@@ -1,5 +1,0 @@
-/home/casey/Documents/Learning/nim/pico-nim eeprom programmer/eeprom_programmer/csource/build/elf2uf2/CMakeFiles/rebuild_cache.dir
-/home/casey/Documents/Learning/nim/pico-nim eeprom programmer/eeprom_programmer/csource/build/elf2uf2/CMakeFiles/edit_cache.dir
-/home/casey/Documents/Learning/nim/pico-nim eeprom programmer/eeprom_programmer/csource/build/elf2uf2/CMakeFiles/elf2uf2.dir
-/home/casey/Documents/Learning/nim/pico-nim eeprom programmer/eeprom_programmer/csource/build/elf2uf2/boot_uf2_headers/CMakeFiles/rebuild_cache.dir
-/home/casey/Documents/Learning/nim/pico-nim eeprom programmer/eeprom_programmer/csource/build/elf2uf2/boot_uf2_headers/CMakeFiles/edit_cache.dir
