@@ -1,7 +1,8 @@
 import picostdlib/[gpio]
-import picostdlib, eeprom
-import bitops, tables
-  
+import picostdlib
+import eeprom, tables
+
+sleep(12000)
 stdioInitAll()
 
 let pinMap = {
@@ -39,16 +40,14 @@ let
 
 let shiftPins = ShiftPins(data: dataPin, clock: clockPin, latch: latchPin, shifterBytes: bytes)
 
-let x = newEEPROM(pinMap, shiftMap, shiftPins)
+let e = newEEPROM(pinMap, shiftMap, shiftPins)
 
-let address = 0b0
-let data = 43
-# LSB FIRST
+var 
+  address = 0b1
+  data = 56
 
-print("\n")
-sleep(5000)
 print("\n")
 sleep(1000)
 print("\n")
-writeEEPROM(x, address, data)
-print($readEEPROM(x, address))
+writeEEPROM(e, address, data)
+print($readEEPROM(e, address))

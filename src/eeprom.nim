@@ -235,26 +235,32 @@ proc setInputs(eeprom: EEPROM; address: SomeInteger; oe, we, ce = false) =
     
     # if the enable pins are not in the shiftMap, and enable parameter is true,
     # then initialize the pin and set to "off" state, then pulse Low to High
-    if not (OE in eeprom.shiftMap):
-      eeprom.outputEnable.init()
-      eeprom.outputEnable.put(High)
-      eeprom.outputEnable.setDir(Out)
-      if oe: eeprom.outputEnable.put(Low)
-      else: eeprom.outputEnable.put(High) # Sanity Check
-    if not (WE in eeprom.shiftMap):
-      eeprom.writeEnable.init()
+  if not (OE in eeprom.shiftMap):
+    eeprom.outputEnable.init()
+    eeprom.outputEnable.put(High)
+    eeprom.outputEnable.setDir(Out)
+    if oe: eeprom.outputEnable.put(Low)
+    else: eeprom.outputEnable.put(High) # Sanity Check
+  if not (WE in eeprom.shiftMap):
+    eeprom.writeEnable.init()
+    eeprom.writeEnable.put(High)
+    eeprom.writeEnable.setDir(Out)
+    if we: 
+      eeprom.writeEnable.put(Low)
+    else: 
       eeprom.writeEnable.put(High)
-      eeprom.writeEnable.setDir(Out)
-      if we: eeprom.chipEnable.put(Low)
-      else: eeprom.chipEnable.put(High)
-    if not (CE in eeprom.shiftMap):
-      eeprom.chipEnable.init()
-      eeprom.chipEnable.put(High)
-      eeprom.chipEnable.setDir(Out)
-      if ce: eeprom.chipEnable.put(Low)
-      else: eeprom.chipEnable.put(High) 
+  if not (CE in eeprom.shiftMap):
+    eeprom.chipEnable.init()
+    eeprom.chipEnable.put(High)
+    eeprom.chipEnable.setDir(Out)
+    if ce: eeprom.chipEnable.put(Low)
+    else: eeprom.chipEnable.put(High) 
   
-  if eeprom.addressSetup == shiftOnly or eeprom.addressSetup == hybrid:
+  if eeprom.addressSetup == shiftOnly or
+    eeprom.addressSetup == hybrid or
+    OE in eeprom.shiftMap or
+    WE in eeprom.shiftMap or
+    OE in eeprom.shiftMap:
     # initialize shift pins
     eeprom.shiftPins.data.init()
     eeprom.shiftPins.clock.init()
@@ -338,13 +344,12 @@ proc setInputs(eeprom: EEPROM; address: SomeInteger; oe, we, ce = false) =
       quit(1)
 
 
-proc writeEEPROM*(eeprom: EEPROM; address, data: SomeInteger) = 
+proc writeEEPROM*(eeprom: EEPROM; address: SomeInteger, data: SomeInteger) = 
   ## Writes the 8 least significant bits of data to the EEPROM at the given 
   ## address.
   ## 
   
-  sleep(10)
-  
+  sleep(5)
   # set the address lines for reading
   setInputs(eeprom, address, oe = false, we = false)
 
@@ -359,12 +364,10 @@ proc writeEEPROM*(eeprom: EEPROM; address, data: SomeInteger) =
       value.put(Low)
   
   # Pulse the write enable pin, which is either dedicated or in the shiftMap
-  sleep(10)
   setInputs(eeprom, address, oe = false, we = true)
-  sleep(2)
+  sleepMicroseconds(1)
   setInputs(eeprom, address, oe = false, we = false)
-  sleep(10)
-
+  sleep(5)
 
 proc readEEPROM*(eeprom: EEPROM, address: SomeInteger): byte = 
   ## Read a byte of data at a specified address from an EEPROM
@@ -372,7 +375,7 @@ proc readEEPROM*(eeprom: EEPROM, address: SomeInteger): byte =
   # TODO: support 74HC166 PISO shift register. (Parallel In, Serial Out)
   #       currently we can only do SIPO shifting
 
-  sleep(10)
+  sleepMicroseconds(10)
   setInputs(eeprom, address, oe=true, we = false) # outputEnable = true
   
   var data: byte
@@ -393,7 +396,7 @@ proc readEEPROM*(eeprom: EEPROM, address: SomeInteger): byte =
 
   # again, should be setInputs
   setInputs(eeprom, address, oe = false, we = false) # Set OE back to false
-  sleep(10)
+  sleepMicroseconds(10)
   return data
 
 

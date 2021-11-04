@@ -1,7 +1,7 @@
 # Package
 
-version       = "0.1.1"
-author        = "Jason"
+version       = "0.1.5"
+author        = "Casey"
 description   = "EEPROM Programmer using Raspberry Pi Pico and the Nim Programming Language"
 license       = "MIT"
 srcDir        = "src"
